@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <!--
+            Tout d'abour pour pouvoir utiliser nos classes bootstrap, nous allons devoir utiliser le cdn bootstrap pour pouvoir le charger et ainsi nous allons pouvoir utiliser les classes bootstrap!
+        -->
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+       <!--
+         Si j'ai envie d'utiliser mes propres classes css, je peux preciser mon propre fichier css ici
+       -->
+       <link rel="stylesheet" href="style/style.css"/>
+
+
+    <body>
+      <!--
+        Bien que pratique pour custamiser la longeur de nos balises html, le systeme de grilles bootstrap prennent toute leur puissance dans leur caracteristiques reponsifs! Ainsi, chaque fois que nous allons ecrire une classe, nous allons pas besoin de rajouter des lignes dans notre fichier css pour definir des breakpoints etc. Nous allons juste a definir quel que classes bootstrap!
+      -->
+      <div class="col-12 bg-primary border border-light">
+         Ici, quoi que il en soit, je prendrai toujours 100% de la longeur de la page!
+      </div>
+
+      <br/>
+       <!--
+         Remarquer ce qui se passe ici! Nous disons que nous voulons une div avec qui prendra 50% de la page mais des que nous arrivons a notre breakpoint lg,nous allons commencer a prendre toute la longeur de la page 
+       -->
+       <div class="col-6 col-lg-12 bg-primary border border-light">
+            Ici, selon ma taille de l'ecran, ma longeur va changer! En plien ecran, je prendra toute la largeur de la page, mais en petit ecran, je ne prendrai seulment 50% de la largeur de la page!
+       </div>
+
+       <br/>
+       <!--
+         Plus souvent, on va vouloir prendre plus de longeur quand nos ecrans se retrcissent! Ici, je dis que nous allons prendre toute la page, mais que des que nous arrivons a la taille "lg" nous n'allons que prendre 50% de la longeur de la page
+       -->
+
+       <div class="col-12 col-lg-6 bg-primary border border-light">
+         Ici, en grande ecran, je ne prends que 50% de la page, mais en petit ecran, je prends la page entiere!
+       </div>
+
+       <br/>
+
+       <div class="col-12 col-md-8 col-lg-4 bg-primary border border-light">
+        Ici, je change de taille chaque fois! Je commence par prendre 100% et a chaque breakpoint, je vais changer de longeur!
+      </div>
+
+    
+    </body>
+</html>

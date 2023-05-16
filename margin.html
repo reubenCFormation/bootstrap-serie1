@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+      <!--
+            Tout d'abour pour pouvoir utiliser nos classes bootstrap, nous allons devoir utiliser le cdn bootstrap pour pouvoir le charger et ainsi nous allons pouvoir utiliser les classes bootstrap!
+        -->
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+       <!--
+         Si j'ai envie d'utiliser mes propres classes css, je peux preciser mon propre fichier css ici
+       -->
+       <link rel="stylesheet" href="style/style.css"/>
+
+    <body>
+        <!--
+            Bootstrap nous permet aussi de pouvoir appliquer des margins et du padding a nos balises!
+        -->
+
+        <!--
+            Pour comprendre comment fonctionne les margins en bootstrap, il est important de comprendre comment fonctionne le "rem". Rem veux dire root element measure. Le rem se base sur la taille de police de base. En html la mesure de rem est de 16px donc tout va se baser par rapport a 16 rem. Ainsi si je defini une classe css et je lui donne une margin de 1.5 rem, cela veux dire que elle aura une marge de 24px (16*1.5)
+
+
+            Ainsi, les margins en bootstrap se definissent avec la classe m-{unité} ou unité peut aller de 1-5 Chaque unité a son propre rem 
+            m-1 .25 rem 
+            m-2 .5 rem 
+            m-3 1 rem
+            m-4 1.5 rem
+            m-5 3 rem
+        -->
+
+        <div class="container-fluid">
+            <!--
+                nous pouvons aussi specifier mt (margin-top) mb (margin-bottom) ms (margin-left) et me (margin-right) pour preciser la direction de la margin que nous souhaiterai prednre.
+            -->
+            <div class="m-3 text-primary bg-light"> 
+                Ici je vais prendre une marge de 16px (1*16px) A gauche a droite, en haut et en bas
+                
+            </div>
+            <div class="ms-5 text-primary bg-light">
+                Ici je vais prendre une marge de 48px (3*16px) a gauche car c'est precier ms et non seulment m
+            </div>
+            <div class="mt-4 text-primary bg-light">
+                Ici je vais prendre une marge de 24px (1.5*16px) en haut car c'est preciser mt
+            </div>
+
+            <!--
+                Le padding en bootstrap suit la meme logique que les marges
+            -->
+            
+        </div>
+
+         
+
+    </body>
+</html>
