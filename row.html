@@ -15,23 +15,38 @@
 
     <body>
       <!--
-        Maintenant, on voit que on peux prendre des longeurs differents et que ces longeurs peuvent aussi s'ajuster en fonction de la taille de l'ecran. Mais pour le moment nous n'avons aucun moyen de mettre nos balises cote a cote. Le display block prends son comportement par defaut et nos divs se mette les unes en dessous des autres. Bien sur, bootstrap a prevu un remede a cette solution et c'est plus simple que faire des float right et float left et des clear et meme plus simple que de faire des d-flex. Nous pouvons tous simplement utiliser la classe row! Lors que nous mettons des elements entre des balises portant la classe row, ces elements se mettront cote a cote!
+        Maintenant, on voit que on peux prendre des largeurs differents et que ces largeurs peuvent aussi s'ajuster en fonction de la taille de l'ecran. Mais pour le moment nous n'avons aucun moyen de mettre nos balises cote a cote. Le display block prends son comportement par defaut et nos divs se mette les unes en dessous des autres. Bien sur, bootstrap a prevu un remede a cette solution et c'est plus simple que faire des float right et float left et des clear et meme plus simple que de faire des d-flex. Nous pouvons tous simplement utiliser la classe row! Lors que nous mettons des balises enfants ayant comme parent row, nos balises se mettront cote a cote! Il faut tout de meme que nos balises enfant appliqent la classe col. Sinon ca ne marchera pas!
       -->
 
+      <!--
+        Ici meme si mes divs sont des enfants de la classe row, ils ne pourront pas de mettre cote a cote car ils ne portent pas la classe col
+      -->
+
+      <div class="row">
+        <div class="text-danger"> Je ne porte pas de classe col</div>
+        <div class="text-danger"> Moi non plus pas de classe col je me mettrai donc en dessous de mon voisin</div>
+        <div class="text-danger"> Et moi non plus pas de classe col donc je suis encore en dessous!</div>
+      </div>
+
+      <br/>
+      <!--
+        Comme nous pouvons le constater, ici j'insere des balises  divs qui portent la classe col-{unite} comme enfant de row et donc mes divs pourront se mettre cote a cote.
+      -->
+      <h2> Exemple 1</h2>
       <div class="row">
          <div class="col-4 bg-primary border border-light"> 
                 Je vais prendre 33% de la longeur de la page mais je vais etre sur la meme ligne!
          </div>
          <div class="col-8 bg-warning border border-light"> 
             Je vais prendre 66% de la longeur de la page mais je vais etre sur la meme ligne!
-     </div>
+        </div>
       </div>
       <br/>
 
       <!--
-        Bien sur que nous pouvons chosir de nos propres longeur
+        Ici j'aurai trois balises div inserer entre une balise row et ces trois divs auront tous la meme largeur
       -->
-
+      <h2> Example 2</h2>
       <div class="row">
          <div class="bg-primary col-4 border border-light">
              Ceci est la premiere des 3 divs avec la meme longeur
@@ -46,12 +61,12 @@
       </div>
 
       <!--
-         Nous pouvons bien sur avoir des col responsives dans nos rows!
+         Nous pouvons bien sur avoir des col responsives dans nos rows! Cette a dire que en fonction de la taille de l'ecran, mais mes cols prendra une longeur differentes!
       -->
       <br/>
-
+      <h2> Example 3</h2>
       <div class="row">
-        <div class="bg-primary col-3 col-lg-3 border border-light">
+        <div class="bg-primary col-3  border border-light">
             Ici je vais avoir la meme taille que les autres div en petit ecran mais pas en grande ecran!
         </div>
         <div class="bg-light col-3 col-lg-4 border border-light">
@@ -64,9 +79,10 @@
       </div>
 
       <!--
-         Il faut toutefois s'assurer de ne pas prendre plus de 12 colonnes en totales! Sinon nous allons revenir a la ligne!
+         Il faut toutefois s'assurer que nos col qui sont cote a cote dans une row ne prennent pas plus de 12 unités de mesure dans l'ensemble. Sinon nous allons revenir a la ligne et nos balises ne tiendront pas tous sur une seul ligne. En l'occurance dans cette example, ce comportement de revenir a la ligne n'aura que lieu lors que nous sommes sur un ecran qui fait plus de 992px de largeur
       -->
   <br/>
+    <h2> Example 4</h2>
       <div class="row">
         <div class="bg-primary col-3 col-lg-6 border border-light">
             Ici je vas prendre 50% de la premiere ligne
@@ -76,7 +92,7 @@
         </div>
         
         <div class="bg-warning col-3 col-lg-6 border border-light">
-           Ici je depasse la ligne par 50%. Je vais donc me mettre en dessous de la premiere ligne car je ne rentre pas!. Neanmoins, en petit ecran je vais pouvoir m'afficher comme il le faut!
+           Ici je depasse la ligne par 50%. Je vais donc me mettre en dessous de la premiere ligne car je ne rentre pas!. Neanmoins, en petit ecran je vais pouvoir m'afficher comme il le faut! Car je change de longeur en fonction de la taille de l'ecran!
         </div>
       </div>
 

@@ -17,13 +17,15 @@
         <!--
             Par defaut, bootstrap va appliquer du style a sa classe "container". La classe "container" defini dans bootstrap va appliquer une certain margin et un certain padding selon la taille de l'ecran. Pour cette raison la, la classe container de bootstrap ne prendra pas toujours 100% de la longeur de la page
         -->
+        <h2> Example 1</h2>
         <div class="container">
-            <div class="col bg-primary border border-light"> Ceci est une div dans un container classique. Remarquez que elle ne prends pas toute la longeur de la page</div>
+            <div class="col bg-primary border border-light"> Ceci est une div dans un container classique. Remarquez que elle ne prends pas toute la longeur de la page vu que bootstrap decide de lui appliquer une certaine margin et padding selon la taille de notre ecran</div>
         </div>
         <br/>
         <!--
             Pour les raisons evoquer plus haut, bootstrap a aussi une classe qui s'apelle container-fluid et cette classe prendra 100% de la largeur de l'ecran peu importe la taille de l'ecran!
         -->
+        <h2> Example 2</h2>
         <div class="container-fluid">
             <div class="col bg-primary border border-light">
                 Je suis une div dans une classe bootstrap container-fluid et donc je vais prendre toute la largeur de l'écran. 
@@ -32,10 +34,10 @@
         <br/>
 
         <!--
-            Nous pouvons meme rendre nos containers responsif! Par exemple, ici je vais avoir un container qui prendra 100% de ma page jusq'au moment que j'arrive a mon lg breakpoint! (soit 960px)  A ce moment la, la div ne prendra plus 100% de la largeur de ma page!
+            Nous pouvons aussi changer le rendu de nos containers selon la taille de notre ecran. Par exemple, dans cette exemple, je peux tres bien dire que tant que je suis a une taille d'ecran en dessous de 992 px je veux que ma div applique la classe container-fluid et des que l'ecran attient la longeur de 992px je vais appliquer la classe container et non container fluid
         -->
-
-        <div class="container-lg">
+        <h2> Example 3</h2>
+        <div class="container-fluid container-lg">
             <div class="col bg-primary border border-light">
                 Tant que nous sommes en dessus du breakpoint medium defini dans bootsrap, nous allons continuer a prendre 100% de la longeur de la page!
             </div>

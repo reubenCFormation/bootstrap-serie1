@@ -17,8 +17,19 @@
        <!--
          Parfois, nous allons vouloir que une balise fasse 25% de la largeur d'une page mais nous allons voulour centrer cette balise. Ceci est evidement possible avec un display flex mais bootstrap nous donne aussi une autre facon de faire. Nous pouvons utiliser les offset pour decaler nos elements! Ici par exemple, je vais vouloir centrer une balise qui fait 25% de la longeur de ma fenetre
        -->
+       <h2> Example 1</h2>
+       <div class="col-4 offset-4 bg-primary text-center"> Je suis une div centré meme si je ne prends pas toute la page </div>
 
-       <div class="col-4 offset-4 bg-primary"> Je suis une div centré meme si je ne prends pas toute la page </div>
+       <!--
+        Noter que nous pouvons aussi decider d'un decalage pour certaines tailles grace a nos fameux breakpoints! Par exemple je peux trés bien dire que lors que je suis en petit ecran je ne veux pas de decalage mais des que je rentre en ecran loyen je veux un decalage de 25% par example 
+       -->
+       <br/>
+       <h2> Example 2</h2>
+       <div class="col-6 offset-md-4 bg-primary text-center"> En petit ecran je n'ai aucun decalage mais en grand ecran j'ai un decalage de 25%</div>
+       <br/>
+       <h2> Exemple 3</h2>
+       <div class="col-4 offset-2 col-lg-6 offset-lg-3 bg-primary"> Changement dynamique</div>
+      
 
     </body>
 </html>

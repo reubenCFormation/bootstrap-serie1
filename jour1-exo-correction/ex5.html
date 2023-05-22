@@ -10,7 +10,10 @@
         <!--
             Creer trois divs differents et faites en sorte de n'avoir que une seul div qui apparait a chaque taille d'ecran. Lors que nous sommes sur une taille d'ecran en dessous de 576px nous allons voir une div avec le texte, "je suis pour les petits ecran". Lors que nous sommes sur une taille d'ecran entre 576 et 992px nous allons voir une div avec le texte "je suis pour les ecrans de taille moyenne". Lors que nous sommes sur une taille d'ecran supperieur a 992px nous allons voir une div avec le texte "je suis pour les ecrans de grande taille". Chaque div prendra 75% de l'ecran. La div de petits ecrans prendra la couleur gris, la div pour ecran de taille moyenne prendra la couleur jaune et la div pour grande ecran prendra la couleur bleu leger
         -->
-     
+        <div class="bg-secondary col-9 d-block d-sm-none"> Je suis pour les petits ecran</div>
+        <div class="bg-warning col-9 d-none d-sm-block d-lg-none"> Je suis pour les ecrans de taille moyenne</div>
+        <div class="bg-info col-9 d-none d-lg-block"> Je suis pour les ecrans de grande taille</div>
+      
 
     </body>
 </html>

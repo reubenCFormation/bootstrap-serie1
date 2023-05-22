@@ -19,7 +19,7 @@
         -->
 
         <!--
-            Pour comprendre comment fonctionne les margins en bootstrap, il est important de comprendre comment fonctionne le "rem". Rem veux dire root element measure. Le rem se base sur la taille de police de base. En html la mesure de rem est de 16px donc tout va se baser par rapport a 16 rem. Ainsi si je defini une classe css et je lui donne une margin de 1.5 rem, cela veux dire que elle aura une marge de 24px (16*1.5)
+            Pour comprendre comment fonctionne les margins en bootstrap, il est important de comprendre comment fonctionne le "rem". Rem veux dire root em. Le rem se base sur la taille de police de base. En html la mesure de rem est de 16px donc tout va se baser par rapport a 16 rem. Ainsi si je defini une classe css et je lui donne une margin de 1.5 rem, cela veux dire que elle aura une marge de 24px (16*1.5)
 
 
             Ainsi, les margins en bootstrap se definissent avec la classe m-{unité} ou unité peut aller de 1-5 Chaque unité a son propre rem 
@@ -34,20 +34,25 @@
             <!--
                 nous pouvons aussi specifier mt (margin-top) mb (margin-bottom) ms (margin-left) et me (margin-right) pour preciser la direction de la margin que nous souhaiterai prednre.
             -->
-            <div class="m-3 text-primary bg-light"> 
+            <h2> Example 1</h2>
+            <div class="m-3 text-warning bg-light"> 
                 Ici je vais prendre une marge de 16px (1*16px) A gauche a droite, en haut et en bas
                 
             </div>
-            <div class="ms-5 text-primary bg-light">
+            <h2> Example 2</h2>
+            <div class="ms-5 text-success bg-light">
                 Ici je vais prendre une marge de 48px (3*16px) a gauche car c'est precier ms et non seulment m
             </div>
-            <div class="mt-4 text-primary bg-light">
-                Ici je vais prendre une marge de 24px (1.5*16px) en haut car c'est preciser mt
+            <h2> Example 3</h2>
+            <div class="mt-4 ms-3 text-primary bg-light">
+                Ici je vais prendre une marge de 24px (1.5*16px) en haut car c'est preciser mt et je vais aussi prendre une margin de 16px a gauche
             </div>
 
             <!--
                 Le padding en bootstrap suit la meme logique que les marges
             -->
+
+            <div class="mt-0 mt-md-5 text-danger"> Du moment que je franchis le breakpoint md, je vais prendre de la marge! </div>
             
         </div>
 
